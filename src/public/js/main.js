@@ -46,13 +46,13 @@ $(function() {
                 $('#nickWrap').hide();
                 $('#contentWrap').removeClass('contentWrap');
                 nickusername.html(`
-            <div class="font-bold text-red-700">
+            <div>
               Bienvenido ${currentName}
             </div>
                `);
             }else{
                nickError.html(`
-            <div class="font-bold text-red-700">
+            <div>
                 El nombre del usuario ya existe o es inválido
             </div>
                `);
