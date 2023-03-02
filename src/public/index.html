@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iniciar sesion en Chat</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+</head>
+<body>
+<div class="container" id="nickWrap">
+    <h1>Iniciar sesion en Chat</h1>
+    <form id="nickForm">
+        <label for="nickName">Nombre de usuario</label>
+        <input type="text" id="nickName" name="username" placeholder="Ingresa tu nombre de usuario">
+        <button type="submit" class="join-button">Unirme</button>
+
+    </form>
+    <p id="nickError"></p>
+</div>
+
+<div class="chat-container contentWrap" id="contentWrap">
+    <div class="header">
+        <h1>Chat</h1>
+        <p id="UserName"></p>
+        <div class="user-list" >
+            <h3>Disponibles</h3>
+            <div id="usernames" >
+                <i class="fas fa-user"> </i>Global
+
+            </div>
+        </div>
+
+    </div>
+    <div class="chat-box" >
+        <div id="chat">
+
+        </div>
+        <div  class="tabcontent active" >
+
+            <form id="message-form">
+            <input type="text" id="message" class="message-input" placeholder="Escribe un mensaje..."><button class="message-button" type="submit">Enviar</button>
+
+            </form>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" name="file" id="file">
+                <button type="submit">Upload</button>
+            </form>
+
+        </div>
+<!--        <div id="chat-individual" class="tabcontent">-->
+
+<!--            <input type="text" class="message-input" placeholder="Escribe un mensaje individual...">-->
+<!--        </div>-->
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
